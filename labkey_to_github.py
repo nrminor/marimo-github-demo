@@ -29,7 +29,7 @@ def _(mo):
 
 @app.cell
 def _(csv_path, pl):
-    penguins_pl = pl.read_csv(csv_path)
+    penguins_pl = pl.read_csv(str(csv_path))
     return (penguins_pl,)
 
 
