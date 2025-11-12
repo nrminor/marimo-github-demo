@@ -22,8 +22,14 @@ def _(mo):
 
 
 @app.cell
+def _(mo):
+    csv_path = mo.notebook_location() / "public" / "data.csv"
+    return
+
+
+@app.cell
 def _(pl):
-    penguins_pl = pl.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv")
+    penguins_pl = pl.read_csv("public/penguins.csv")
     return (penguins_pl,)
 
 
