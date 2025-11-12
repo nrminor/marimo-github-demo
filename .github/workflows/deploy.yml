@@ -22,9 +22,6 @@ jobs:
       - name: Export notebook
         run: uv run marimo export html-wasm labkey_to_github.py -o wasm_dir --mode run --show-code
 
-      - name: Copy data files to wasm directory
-        run: cp penguins.csv wasm_dir/files/
-
       - name: Upload Page Artifact
         uses: actions/upload-pages-artifact@v3
         with:
